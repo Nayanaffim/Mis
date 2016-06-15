@@ -1,0 +1,32 @@
+.p {
+  page-break-before: always;  
+  page-break-after: always;  
+  background-color: red;
+  color: yellow;
+}
+.table {
+width: 90%;
+border: 1px solid #999999;
+}
+
+/*th, td {
+  padding: 7px 10px 10px 10px;
+}
+*/
+.th {
+  border-bottom: 2px solid #111111;
+  border-top: 1px solid #999999;
+  font-size: 90%;
+  /*  letter-spacing: 0.1em;
+*/text-align: left;
+  text-transform: uppercase;  
+}
+
+/*.tbody-pdf, tr.even {
+    background-color: green;
+}
+
+.tbody, tr.odd {
+    background-color: yellow;
+}
+*/

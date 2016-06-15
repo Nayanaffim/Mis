@@ -1,0 +1,438 @@
+	#header1{
+	  background:#2a3542;
+	  height:55px;
+	  color:#ffffff;
+	  padding-top:6px; 
+	  }
+
+	#header2{
+	 height:200px; 
+	 padding-top:7px;
+	}
+
+	#header3{
+	  height:400px; 
+	  padding-top:7px;
+	}
+
+	#header4{
+	  background:#2a3542;
+	  height:50px;
+	  color:#ffffff; 
+	  padding-top:7px;
+	}
+
+	#header5{
+		background:#2a3542;
+		height:50px;
+		color:#ffffff;
+	}
+
+	#margin1{
+		margin:-10px;
+	}
+
+	#margin2{
+		margin-left:20px;
+	}
+
+	#label1{
+	  background:#ffffff; 
+	  height:20px; 
+	  padding-top:5px;
+	}
+
+	#label2{
+	 background:#ffe680; 
+	 height:30px; 
+	 padding-top:5px;
+	}
+
+	#label3{
+	  padding-left:5px;
+	}
+
+	#label4{
+	  padding:5px
+	}
+
+	#text-transform{
+	  text-transform: capitalize;
+	}
+
+	#panel-margin{
+	  padding-top:5px;
+	}
+
+	#style-table{
+	  background:#2a3542;
+	  color:#ffffff;
+	  height:50px;
+	  padding-top:5px; 
+	  padding-left:12px;
+	}
+
+	#label5{
+		width: 178px; 
+		height: 45px; 
+		margin-top: 41px;
+	}
+   
+   #label8{ 
+   	height:30px;  
+   	padding-top:5px;
+   }
+   
+	#padding{
+		padding-top: 0px;
+		margin-top: 150px;
+	}
+
+  #div1{
+		color:#ffffff;
+		height:55px;
+		padding-top:7px;
+		padding-left:12px;
+		color:grey;
+	}
+
+	#head7 {
+		height:50px;
+		padding-top:10px;
+		padding-left:12px;
+    }
+
+	#padding-bottom{
+		padding-bottom:1px;
+	}
+
+	.heading1{
+	  padding-right: -11px;   
+	  width: 283px; 
+	}
+
+	.image{
+	 width: 76px; 
+	 height: 61px; 
+	 padding: 6px; 
+	 float: left; 
+	 margin-top: -3px; 
+	 border-top-width: 0px;
+	}
+
+	.image1{
+	  width:18%;
+	  height:18%;
+	  float:left
+	}
+
+	.image11{
+	  width:16%;
+	  height:16%;
+	  float:left
+	}
+
+	.margin1{margin:20px;}
+
+	.head{
+	  background:#2a3542;
+	  color:#ffffff;
+	}
+
+	.head1{
+	  background:#2a3542;
+	  color:#ffffff;
+	}
+
+	.head-salary{
+		background-color: #123455;
+		height: 2px;
+	}
+
+	.heading4{
+		padding-left:10px
+	}
+
+	.head2{
+		background-color: #123455;
+		height: 2px;
+	}
+    
+  .head3{
+	 color:#ffffff;
+	 height:60px;
+	 padding-top:24px; 
+ 	 padding-left:12px;
+  }  
+
+	.head4{
+		height:30px;
+		padding-top:5px;
+		padding-left:12px;
+	}
+
+ .image2{
+ 	 width:13%;
+ 	 height:17%;
+ 	 float:left;
+ 	}
+
+ 	.row1{
+ 		height:40px;
+ 	}
+
+	.head5{
+		height:50px;
+		padding-top:5px; 
+		padding-left:12px;
+	}  
+
+	.head6{
+		background:#FFFF;
+		height:30px;
+		padding-top:5px;
+		padding-left:12px;
+	} 
+
+	 .label6{
+	 	 padding-top:5px;
+	 }
+
+	.head7{
+		background:#A4A4A4;
+		color:#ffffff;
+		height:40px;
+		padding-top:5px;
+		padding-left:12px;
+	}
+
+  .imagedisplay{
+	 width: 158px; 
+	 height: 188px; 
+	 float: left; 
+	 padding-top: 3px;
+	}
+
+	.image4{
+    width: 134px; 
+    height: 124px; 
+    float: left;
+	}
+   
+  .backcolor1{
+  	border: 1px solid;
+  }
+  
+ .columnSize1{
+ 	 width: 177px;
+ }
+  
+  .columnSize2{
+  	width: 160px;
+  }
+
+  .border-style{
+  	-moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    height: 189px;
+    margin-bottom: 11px;
+    margin-left: 0;
+    margin-top: 13px;
+    padding-left: 15px;
+    padding-top: 14px;
+    width: 963px;
+  }
+  
+  .text1{
+  	 margin-left: 42px;
+  }
+   .text11{
+  	 margin-left: 20px;
+   }
+
+  .previous-next{
+  	padding: 0px 545px 0px 0px; 
+  	border-left-width: 0px; 
+  	width: 80px; 
+  	margin-top: -21px;
+  }
+ 
+	#notification-table1_paginate{
+	    padding-right: 85px;
+	    padding-top: 0px;
+	}
+
+	#notification-table2_paginate{
+	    padding-right: 200px;
+	}
+
+	#holidays-table-1_paginate{
+		width: 80px;
+		margin-top: -36px;
+		/*padding-right: 564px;*/
+		padding-right: 200px;
+	}
+
+	#holidays-table-2_paginate{
+		padding-right: 200px;
+		width: 80px;
+		margin-top: -36px;
+	}
+
+	#editable-sample-admin{
+		padding-right: 200px;
+	}
+
+	#editable-sample-hr{
+		padding-right: 200px;
+	}
+
+	#editable-sample-admin_paginate{
+		/*padding-right: 600px;*/
+		padding-right: 200px;
+		width: 80px;
+		margin-top: -36px;
+	}
+
+	#accept_reject_table_paginate{
+	  /*padding-right: 500px;*/
+	  padding-right: 200px;
+		width: 80px;
+		margin-top: -36px;
+	}
+
+	#notification-table_paginate{
+		padding-right: 200px;
+		width: 80px;
+		margin-top: -36px;
+	}
+
+	#holidays-table_paginate{
+		padding-right: 200px;
+		width: 80px;
+		margin-top: -30px;
+	}
+
+	#invoice-table_paginate{
+		/*padding-right: 644px;*/
+		padding-right: 200px;
+		width: 80px;
+		margin-top: -30px;
+	}
+
+	#feedback-table_paginate{
+		padding-right: 200px;
+		/*padding-right: 587px;*/
+		width: 80px;
+		margin-top: -30px;
+		padding-top: 5px;
+	}
+
+	#invoice-table-1_paginate{
+		padding-right: 200px;
+		/*padding-right: 571px;*/
+		width: 80px;
+		margin-top: -30px;
+	}
+
+	.hr-note{
+		background-color: #123455;
+		height: 2px;
+	}
+
+  .backcolor{
+    background-color: #123455;
+    height: 2px;
+  }
+ 
+ .position{
+ 	 width: 521px; 
+ 	 right: -264px;
+ 	  top: -203px; 
+ 	  bottom: 119px; 
+ 	 left: 530px;
+ 	  padding-right: 9px;
+ }
+
+ .position-project{
+ 	  padding-left: 27px;
+ 	  margin-bottom: -22px;
+ }
+
+ .margin11{
+ 	  margin:20px;
+ }
+
+ .button{
+ 	margin:-30px;
+ 	 margin-right: 33px;
+ }
+
+ .birthday{
+ 	  height: 54px;
+    margin-top: 17px;
+    width: 322px;
+ }
+ 
+ .font{
+	 	background-color: #123455;
+	 	height: 2px;
+ }
+
+ .lab{
+ 	 background:#FFFF;
+ 	 height:30px; 
+ 	 padding-top:5px;
+ }
+
+ .bottom{
+	 	margin-bottom: 12px;
+	 	margin-top: -17px;
+	 	width: 1024px;
+	 	margin-left: -33px;
+ }
+
+ .paginate_disabled_next {
+ 	 padding-left: 10px;
+ 	 padding-right: 13px;
+ 	 border: solid 1px;
+   border-radius: 29px;
+	}
+
+	.paginate_enabled_next
+	{
+	  padding-left: 10px;
+	  border: solid 1px;
+    border-radius: 29px;
+    padding-right: 13px;
+	}
+
+	.paginate_disabled_previous {
+		padding-left:  2px;
+		padding-right: 2px;
+		border: solid 1px;
+		border-radius: 29px;
+	}
+
+	.paginate_enabled_previous {
+		 padding-left:  2px;
+		 border: solid 1px;
+	   border-radius: 29px;
+	   padding-right: 2px;
+	}
+
+  .datepicker {
+    z-index:1150 !important;
+  }
+  
+  .side_bar_label{
+  	background:#FFFF; 
+  	height:30px; 
+  	padding-top:5px;
+	}
