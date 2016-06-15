@@ -1,6 +1,5 @@
 <header class="header white-bg">
-
-  <!--logo start-->
+ <!--logo start-->
   <a href="/" class="logo">Affi<span>MIS</span></a>
   <!--logo end-->
   <div class="nav notify-row" id="top_menu">
@@ -120,6 +119,7 @@
                             <b><%#= User.where(:id => holiday.user_id).last.first_name.capitalize rescue nil%></b>
                              <%#=holiday.leave_to_date%>&nbsp;to&nbsp;<%#=holiday.leave_from_date%>
                              <%#end%>
+                             <%#= current_user.first_name.capitalize rescue nil%>
                            </td>                  
                          </tr>
                        </li>
@@ -206,7 +206,7 @@
               <%#= image_tag current_user.employee_detail.avatar_url, :size =>"40x40" if current_user.employee_detail.present?  rescue''%>
            <%#end%>
            
-            <!-- <span class="username"><%#= current_user.first_name.capitalize if current_user.first_name.present? %></span> -->
+            <span class="username"><%= current_user.email.capitalize if current_user.email.present? %></span>
           <%# end %>
           <b class="caret"></b>
         </a>
