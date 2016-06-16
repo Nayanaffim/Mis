@@ -4,11 +4,8 @@ class EmployeesController < ApplicationController
 	end
 	
 	def index
-<<<<<<< Updated upstream
 		@employees =EmployeeDetail.all
-=======
 		@user=current_user
->>>>>>> Stashed changes
 	end
 
 	private
