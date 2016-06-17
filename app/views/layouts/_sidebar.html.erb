@@ -5,7 +5,20 @@
         <ul class="sidebar-menu" id="nav-accordion">
           <li class="sub-menu">
           <li>
-          <!-- ********************* dashboard ****************** -->
+           <!-- ********************* if admin ****************** -->
+            <% if current_user.has_role? "admin" %>
+              <li>
+              <% if params[:action] != "new" %>
+              <% subtabs_path1 = [new_user_registration_path] %>
+                <li><%= link_to '<i class="fa fa-users "></i> Create User'.html_safe, new_user_registration_path, class: "#{ is_active?(subtabs_path1)}"%></li>
+              <% else %>
+                <% subtabs_path2 = [users_path] %>
+                <li><%= link_to '<i class="fa fa-chevron-circle-left"></i> Back'.html_safe, users_path, class: "#{ is_active?(subtabs_path2) }" %></li>
+              <% end %> 
+              </li>
+            <%end%>
+             <!-- ********************* if admin close ****************** -->
+
           
              </li>
              </li>

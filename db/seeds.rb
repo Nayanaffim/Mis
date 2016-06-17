@@ -9,13 +9,13 @@
 
 
   user = User.new(
-      :email                 => "admin@rails.com",
-      :password              => "123456",
-      :password_confirmation => "123456",
-      :firstname            =>  "admin1",
-       :lastname             =>  "admin"
+    :email                 => "admin@rails.com",
+    :password              => "123456",
+    :password_confirmation => "123456",
+    :firstname             =>  "admin1",
+    :lastname              => "admin"
   )
   #user.skip_confirmation!
   #user.skip_prepare_username
-  user.save!
+user.save!
 user.add_role :admin
