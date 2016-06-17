@@ -1,29 +1,35 @@
-    <br><br>
-    <aside>
-      <div id="sidebar"  class="nav-collapse" style="overflow: hidden;" tabindex="5000">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu" id="nav-accordion">
-          <li class="sub-menu">
-          <li>
-           <!-- ********************* if admin ****************** -->
-            <% if current_user.has_role? "admin" %>
-              <li>
-              <% if params[:action] != "new" %>
-              <% subtabs_path1 = [new_user_registration_path] %>
-                <li><%= link_to '<i class="fa fa-users "></i> Create User'.html_safe, new_user_registration_path, class: "#{ is_active?(subtabs_path1)}"%></li>
-              <% else %>
-                <% subtabs_path2 = [users_path] %>
-                <li><%= link_to '<i class="fa fa-chevron-circle-left"></i> Back'.html_safe, users_path, class: "#{ is_active?(subtabs_path2) }" %></li>
-              <% end %> 
-              </li>
-            <%end%>
-             <!-- ********************* if admin close ****************** -->
+<br><br>
+<aside>
+  <div id="sidebar"  class="nav-collapse" style="overflow: hidden;" tabindex="5000">
+  <!-- sidebar menu start-->
+  <ul class="sidebar-menu" id="nav-accordion">
+    <li class="sub-menu">
+      <li>
+      <!-- ********************* dashboard ****************** -->
+        <% subtabs_path = [users_path] %>
+        <a class="<%= is_active?(subtabs_path) %>" href="/users">
 
-          
-             </li>
-             </li>
-             </ul>
-    </aside>
+        <i class="fa fa-dashboard"></i>
+        <span>Dashboard</span>
+        </a>
+        </li>
+        <!-- ********************* if admin ****************** -->
+        <% if current_user.has_role? "admin" %>
+        <li>
+        <% if params[:action] != "new" %>
+          <% subtabs_path1 = [new_user_registration_path] %>
+          <li><%= link_to '<i class="fa fa-users "></i> Create User'.html_safe, new_user_registration_path, class: "#{ is_active?(subtabs_path1)}"%></li>
+        <% else %>
+          <% subtabs_path2 = [users_path] %>
+          <li><%= link_to '<i class="fa fa-chevron-circle-left"></i> Back'.html_safe, users_path, class: "#{ is_active?(subtabs_path2) }" %></li>
+        <% end %> 
+        </li>
+        <%end%>
+      <!-- ********************* if admin close ****************** -->          
+      </li>
+    </li>
+  </ul>
+</aside>
 
     <script type="text/javascript">
       $('li#my-acc > a').on( "click", function() {

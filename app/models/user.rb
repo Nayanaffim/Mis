@@ -1,14 +1,13 @@
 class User < ActiveRecord::Base
   rolify
   # Include default devise modules. Others available are:
-	  # :confirmable, :lockable, :timeoutable and :omniauthable
-	devise :database_authenticatable, :registerable,:recoverable, :rememberable, :trackable, :validatable
-	belongs_to :role
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+	devise        :database_authenticatable, :registerable,:recoverable, :rememberable, :trackable, :validatable
+	belongs_to    :role
 	before_create :prepare_username,:gen_password
-	after_create :send_mail
+	after_create  :send_mail
  
-    has_one :employee_detail
-
+  has_one :employee_detail
 
 	before_save { self.email = email.downcase}
 	validates :firstname,:lastname ,presence:true
@@ -35,7 +34,8 @@ class User < ActiveRecord::Base
 		self.password = self.password_confirmation = self.pwd = (0..5).map{ rand_password[rand(rand_password.length)] }.join if self.password.blank?
 	end
 
-	def send_mail
-		UserMailer.welcome(self).deliver
+	def send_mail 
+		UserMailer.welcome(self).deliver_now
+		UserMailer.new_user_account(self).deliver_now
 	end
 end

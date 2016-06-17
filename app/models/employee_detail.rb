@@ -8,9 +8,8 @@ class EmployeeDetail < ActiveRecord::Base
   validates :guardian_full_name,format: {with: /\A[^0-9`!@#\$%\^&*+_=]+\z/ , message: "must be formatted correctly"}
   validates :first_name,:last_name,format: { with: /\A[a-zA-Z]+\z/, message: "only allows letters" }
   validates :landline,:guardian_landline,:guardian_mobile, :numericality => true,:allow_nil => true
-  # acts_as_birthday :dob 
   validate :dob_must_be_before_date_of_join
-
+  # acts_as_birthday :dob 
   def dob_must_be_before_date_of_join
     return unless dob and date_of_join
     errors.add(:dob, "must be before date of joining") unless dob < date_of_join

@@ -15,12 +15,21 @@
           <td><%= user.firstname %></td>
           <td><%= user.lastname%></td>
           <td><%= user.email %></td>
+          <td>
+            <%= link_to 'Send Email',send_email_user_employees_path(user.id), class: "btn btn-shadow btn-info btn-xs" %>
+          </td>
+          <td>
+            <%= link_to "Remove",users_soft_delete_path(current_user,:id=>user.id),data: { confirm: 'Do You Want to with Continue Delete Process ?' }, class: "btn btn-shadow btn-info btn-xs"%>
+          </td>
+          <td>
+            <%= link_to 'Change Password', edit_password_user_path(current_user, :id=>user.id), class: "btn btn-shadow btn-info btn-xs" %>
+          </td>
         </tr>
         <% end %>
       </tbody>
     </table>
-		<% else %>
-			<%= "welcome user" %>
+    <%else%>
+      <%= render :template => 'employees/dashboard' %>
 		<% end %>
 	</section>
 </section>

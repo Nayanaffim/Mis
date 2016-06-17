@@ -1,7 +1,7 @@
 class CreateEmployeeDetails < ActiveRecord::Migration
   def change
     create_table :employee_details do |t|
-    	 t.integer :user_id 
+    	t.integer :user_id 
       t.integer  :emp_id
       t.string   :user_name
       t.string   :first_name
