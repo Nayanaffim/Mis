@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  course: MyString
+  university: MyString
+  passing_year: 2016-06-20
+  percentage: 1.5
+  stream: MyString
+
+two:
+  user_id: 
+  course: MyString
+  university: MyString
+  passing_year: 2016-06-20
+  percentage: 1.5
+  stream: MyString

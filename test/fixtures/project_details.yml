@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  project_name: MyString
+  description: MyString
+  project_start_date: 2016-06-20
+  project_end_date: 2016-06-20
+  project_type: MyString
+  team_lead_name: MyString
+  project_url: MyString
+
+two:
+  user_id: 
+  project_name: MyString
+  description: MyString
+  project_start_date: 2016-06-20
+  project_end_date: 2016-06-20
+  project_type: MyString
+  team_lead_name: MyString
+  project_url: MyString

@@ -1,0 +1,90 @@
+<section id="main-content">
+ <section class="wrapper">
+  <section class="panel">
+   <div class="col-lg-12">
+     <section class="panel" style= padding-top:5px;>
+        <header class="panel-heading"><h4>Fill Your Previous Oganization Details</h4></header>
+          <%= form_for @previous, :url =>previous_company_detail_create_user_employees_path(current_user) do |f| %>
+              <div class="panel-body">
+                <% if @previous.errors.any? %>
+                <div id="error_explanation" class ="alert alert-danger">
+                  <ul>
+                    <% @previous.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+                <% end %>   
+                <div class=" form col-lg-12">
+                  <form class="cmxform form-horizontal tasi-form" id="commentForm" method="get" action="">
+                    <!-- <div class="form-group "> -->
+                    <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Employee ID </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :employee_id, :class=>"form-control" %><br />
+                      </div>
+                    </div>
+
+                    <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Company Name* </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :company_name, :class=>"form-control", :required => true %><br />
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Location* </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :location,  :class=>"form-control", :required => true %><br />
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Designation </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :designation,  :class=>"form-control" %><br />
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Last CTC* </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :last_CTC,  :class=>"form-control", :required => true %><br />
+                      </div>
+                    </div> 
+                    
+                    <div class="form-group " data-behaviour='datepicker'>
+                      <label class="col-lg-2 control-label"> From Month Year* </label>
+                      <div class="col-lg-10">
+                        <%= f.date_select :from ,{order: [:year,:month,:day,], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 0, end_year: Date.today.year - 100},{required: true} %><br /><br />
+                        <%#= f.date_field :from_month_year,:id=>"date_of_joining", :class=>"form-control",:placeholder => "Please fill up your Start Date", :autocomplete=>"off" %> 
+                      </div>
+                    </div>
+                    <div class="form-group " data-behaviour='datepicker'>
+                      <label class="col-lg-2 control-label"> To Month Year* </label>
+                      <div class="col-lg-10">
+                        <%= f.date_select :to ,{order: [:year,:month,:day,], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 0, end_year: Date.today.year - 100}, {required: true} %><br /><br />
+                        <%#= f.date_field :to_month_year,:id=>"date_of_ending", :class=>"form-control", :placeholder => "Please fill up your End Date", :autocomplete=>"off" %>
+                         <%#= f.date_field :to_month_year, :id => 'datepicker2',  :class=>"form-control", :autocomplete => "on" %>
+                      </div>
+                    </div>
+                    
+                     <div class="form-group ">
+                      <label class="col-lg-2 control-label"> Resign Reason </label>
+                      <div class="col-lg-10">
+                        <%= f.text_field :Resignation_reason,  :class=>"form-control" %><br />
+                      </div>
+                    </div>
+                                    
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <center> <button class="btn btn-shadow btn-danger" type="submit">Save</button>
+                          <button class="btn btn-shadow btn-default btn-md" type="reset">Reset</button>
+                        </center>
+                      </div>
+                    </div>
+                  </form>
+               </div>
+           </div>
+        <% end %>
+     </section>
+   </section>
+</section>
+

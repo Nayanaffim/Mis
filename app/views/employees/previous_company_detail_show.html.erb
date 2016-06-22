@@ -1,0 +1,48 @@
+<section id="main-content">
+ <section class="wrapper">
+  <div class="row">
+   <div class="col-lg-12">
+    <section class="panel">
+     <header class="panel-heading">Ex-employer Details
+        <span class="pull-right"><%= link_to "Add More",  previous_company_detail_new_user_employees_path(current_user),class: "btn btn-shadow btn-info btn-sm" %>
+        </span>
+     </header>
+      <table class="table table-bordered table-striped table-condensed">
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Company Name</th>
+            <th>Location</th>
+            <th>Designation</th>
+            <th>From Year</th>
+            <th>To Year</th>
+            <th>Last Salary</th>
+            <th>Reason For Resign</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @previous.each do |pre| %>
+            <% if current_user.id == pre.user_id %>
+            <tr>
+              <td><%= pre.employee_id %></td>
+              <td><%= pre.company_name %></td>
+              <td><%= pre.location.titleize %></td>
+              <td><%= pre.designation %></td>
+              <td><%= pre.from %></td>
+              <td><%= pre.to %></td>
+              <td><%= pre.last_CTC %></td>
+              <td><%= pre.Resignation_reason %></td>
+              <td><%= link_to "Edit",  previous_company_detail_edit_user_employees_path(current_user, :pre => pre),class: "btn btn-shadow btn-info btn-xs" %></td>
+            </tr>
+              <%end%>
+            <%end%>
+          </tbody>
+        </table>
+      </section>
+        <%#= link_to "Add More",  previous_organization_detail_new_user_employees_path(current_user),class: "btn btn-shadow btn-info btn-xs" %>
+     </div>
+    </div>
+  </section>
+</section>
+</section>

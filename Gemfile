@@ -15,6 +15,8 @@ gem 'pry'
 gem 'rolify'
 gem 'birthday'
 gem 'cancancan'
+gem 'friendly_id'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

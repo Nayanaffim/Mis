@@ -1,0 +1,49 @@
+<section id="main-content">
+  <section class ="wrapper">
+     <section class="panel" style ="margin:20px">
+        <section class="panel">
+          <div class="col-md-12 panel-heading" id ="head7">
+            <div class="col-md-11 "><h4>Your Project Details</h4></div>
+             <div class="col-md-1"> <%= link_to "Add More",  project_new_user_employees_path(current_user),class: "btn btn-shadow btn-info btn-xs" %></div>
+          </section>
+          </div>
+
+          <table class="table table-bordered table-striped table-condensed">
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Your Role</th>
+                <th>Project Duration</th>
+                <th>Project Description</th>
+                <th>Technical Stack</th>
+                <th>Company Name</th>
+                <th>Progress</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @projects.each do |project| %>
+               
+              <tr>
+                <td><%= project.project_name %></td>
+                <td><%= project.your_role %></td>
+                
+
+                <td><%= project.duration %><br>
+                <%=  project.project_start_date%><%=  project.project_end_date %>
+                </td>
+                <td><%= project.description %></td>
+                <td><%= project.technology %></td>
+                <td><%= project.company_name %></td>
+                <td><%= link_to "Edit",  project_edit_user_employees_path(current_user, :projectdetail => project),class: "btn btn-shadow btn-info btn-xs"%></td>
+              </tr>
+            
+              <% end %>   
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </section>
+</section>
+</section>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  company_name: MyString
+  location: MyString
+  designation: MyString
+  last_CTC: 1.5
+  Resignation_reason: MyText
+  from: 2016-06-20 16:42:00
+  to: 2016-06-20 16:42:00
+
+two:
+  user_id: 
+  company_name: MyString
+  location: MyString
+  designation: MyString
+  last_CTC: 1.5
+  Resignation_reason: MyText
+  from: 2016-06-20 16:42:00
+  to: 2016-06-20 16:42:00

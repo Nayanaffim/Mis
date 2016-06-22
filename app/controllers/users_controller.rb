@@ -3,7 +3,43 @@ class UsersController < ApplicationController
 	def index
   	@user = current_user
   	@users = User.where(:soft_delete => false).order(:created_at => :DESC)
+  end
+
+	def show
+		@user = User.friendly.find(params[:id])
 	end
+
+	def new
+		@user = User.new
+	end
+
+	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:id])
+		if @user.update_attributes(user_params)
+			redirect_to user_url, notice: "Updated User."
+		else
+			render :edit
+		end
+	end
+
+	def create
+		@user = User.new(user_params)
+		if @user.save
+		  redirect_to user_url, notice: "User succesfully created!" 
+		else
+		  render :new
+	  end
+	end
+
+
+  def show
+    @user = User.friendly.find(params[:id])
+  end
+
 
 	def edit_password
   end
@@ -23,9 +59,8 @@ class UsersController < ApplicationController
   end
 
   private
-
   def set_user
-     @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def user_params

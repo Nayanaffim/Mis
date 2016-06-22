@@ -3,14 +3,11 @@ class CreateEmployeeDetails < ActiveRecord::Migration
     create_table :employee_details do |t|
     	t.integer :user_id 
       t.integer  :emp_id
-      t.string   :user_name
-      t.string   :first_name
-      t.string   :last_name
+      t.string   :firstname
+      t.string   :lastname
       t.date     :dob
       t.date     :date_of_join
       t.string   :blood_group
-      t.string   :prevoius_company
-      t.string   :designation
       t.string   :official_email_id 
       t.string   :mobile
       t.bigint   :landline
