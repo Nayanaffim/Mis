@@ -171,7 +171,7 @@
 		padding-left:12px;
 	}
 
- .image2{
+    .image2{
  	 width:13%;
  	 height:17%;
  	 float:left;
@@ -436,3 +436,8 @@
   	height:30px; 
   	padding-top:5px;
 	}
+
+   .margin_panel
+   {
+   	margin-left:0px;
+   }

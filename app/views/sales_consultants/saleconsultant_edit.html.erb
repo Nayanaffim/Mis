@@ -1,8 +1,8 @@
 <section id="main-content">
   <section class="panel">
    <div class="col-lg-12">
-     <section class="panel" style= padding-top:5px;>
-        <header class="panel-heading" style="background:#2a3542;color:#ffffff;">
+     <section class="panel padding">
+        <header class="panel-heading bgcolor" >
           <bold><h4>Edit Consultant Details</h4></bold>
         </header>
         <%= form_for @consultant, :url =>  saleconsultant_update_user_sales_consultants_path(current_user, :consultants =>@consultant.id) do |f| %>

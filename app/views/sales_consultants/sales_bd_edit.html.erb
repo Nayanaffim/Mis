@@ -1,11 +1,11 @@
 <section id="main-content">
   <section class="panel">
    <div class="col-lg-12">
-     <section class="panel" style= padding-top:5px;>
-        <header class="panel-heading" style="background:#2a3542;color:#ffffff;">
+     <section class="panel padding">
+        <header class="panel-heading bgcolor">
           <bold><h4>Edit BDE Details</h4></bold>
         </header>
-          <%= form_for @sale, :url =>sales_bd_update_user_sales_consultants_path(current_user ,:bdes =>@sale.id) do |f| %>
+          <%= form_for @sale, :url =>sales_bd_update_user_sales_consultants_path(current_user ,:sale => @sale.id) do |f| %>
 
               <div class="panel-body">
                  <div class=" form">
@@ -30,7 +30,7 @@
                            <div class="form-group ">
                             <label class="col-lg-3 control-label"> Skype Id:* </label>
                              <div class="col-lg-8">
-                               <%= f.text_field :skype_id, :class=>"form-control" %><br/>
+                               <%= f.text_field :skype_id, :value => EmployeeDetail.skype_search(current_user) ,:class=>"form-control" %><br/>
                              </div>
                            </div>
 

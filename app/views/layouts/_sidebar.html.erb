@@ -59,9 +59,18 @@
            <% end %>
 
             <li><% if current_user.has_role? :sale_consultant %>
-                  <%=link_to "sale consultant Details",  saleconsultant_show_user_sales_consultants_path(current_user)%></li>
 
-                  <%=link_to "sale BD Details",  sales_bd_show_user_sales_consultants_path(current_user)%></li>
+                
+                <li><%=link_to "Basic Details",  basic_detail_show_user_employees_path(current_user)%></li>
+                <li><%=link_to "Academic Details", academic_detail_display_user_employees_path(current_user) %></li>
+                <li><%=link_to "Bank Identity Details",  bank_detail_show_user_employees_path(current_user) %></li>
+                <li><%= link_to "Previous Company Details", previous_company_detail_show_user_employees_path(current_user) %></li>
+                <li><%= link_to "<i class='glyphicon glyphicon-wrench'></i> Project Details".html_safe, project_show_user_employees_path(current_user)%></li>
+             
+             
+                  <li><%=link_to "sale consultant Details",  saleconsultant_show_user_sales_consultants_path(current_user)%></li>
+
+                 <li> <%=link_to "sale BD Details",  sales_bd_show_user_sales_consultants_path(current_user)%></li>
                   <%end %>
 
     </aside>

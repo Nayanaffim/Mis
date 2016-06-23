@@ -7,16 +7,16 @@ class EmployeesController < ApplicationController
 	@employees =EmployeeDetail.all
 	end
 
- def basic_detail_new
+  def basic_detail_new
 	 @employee = current_user.build_employee_detail
-end
+  end
 
 	def basic_detail_create   
     @employee = current_user.build_employee_detail(employee_params)
      if @employee.save
-      redirect_to user_employee_path(current_user, @employee), :notice => "Details are succesfully saved."
+      redirect_to  basic_detail_show_user_employees_path(current_user, @employee), :notice => "Details are succesfully saved."
      else
-      render 'basic_detail_show_user_employees'
+      render 'basic_detail_new'
      end
   end
 
@@ -38,7 +38,7 @@ end
         redirect_to basic_detail_show_user_employees_path,:notice => "Your Details are  updated"
       else
         render 'basic_detail_edit_user_employees'
-    end
+      end
   end
 
   def academic_detail_new
@@ -198,7 +198,7 @@ end
   end
 
 	def employee_params
-	 params.require(:employee_detail).permit(:user_id,:firstname,:lastname,:dob,:date_of_join,:blood_group,:official_email_id,:mobile,:landline,:current_address,:permanent_address,:skype_id,:guardian_full_name,:guardian_mobile,:guardian_landline,:guardian_address)
+	 params.require(:employee_detail).permit(:user_id,:personal_email_id,:firstname,:lastname,:dob,:date_of_join,:blood_group,:official_email_id,:mobile,:landline,:current_address,:permanent_address,:skype_id,:guardian_full_name,:guardian_mobile,:guardian_landline,:guardian_address)
 	end
 
 	def previous_params
@@ -206,7 +206,7 @@ end
   end
 
   def project_params
-  	 params.require(:project_detail).permit(:user_id, :project_name,:Your_role,:project_url,:description, :technology, :client_name,:company_name,:duration, :team_lead_name)
+  	 params.require(:project_detail).permit(:user_id, :project_name,:your_role,:project_url,:description, :technology, :client_name,:company_name,:duration, :team_lead_name)
   end
 
 

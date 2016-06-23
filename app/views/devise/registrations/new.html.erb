@@ -26,7 +26,7 @@
       <div class="col-xs-6">
         <%= f.email_field :email, :class=>"form-control",:required => true, placeholder: "email" %>
       </div>
-      <%= f.hidden_field :creators_id, :value=>current_user.id %>
+      <%= f.hidden_field :creators_id, :value => current_user.id %>
     </div>
     <button class="btn btn-lg btn-login btn-block" type="submit">Create</button>
   <% end %>
